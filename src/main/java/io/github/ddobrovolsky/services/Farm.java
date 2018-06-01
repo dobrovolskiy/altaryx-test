@@ -8,9 +8,9 @@ package io.github.ddobrovolsky.services;
  */
 public interface Farm {
 
-    public void printState();
+    void printFarmData();
 
-    public void giveBirth(int parentCowId, int childCowId, String childNickName);
+    void giveBirth(int parentCowId, int childCowId, String childNickName);
 
-    public void endLifeSpan(int cowId);
+    void endLifeSpan(int cowId);
 }

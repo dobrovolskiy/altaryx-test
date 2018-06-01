@@ -56,4 +56,6 @@ public class Cow {
                 ", nickName='" + nickName + '\'' +
                 '}';
     }
+
+
 }

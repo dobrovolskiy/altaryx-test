@@ -5,17 +5,18 @@ import io.github.ddobrovolsky.entities.Cow;
 import io.github.ddobrovolsky.entities.CowWithParentId;
 
 /**
- * Implementation of Farm with
+ * Implementation of Farm with {@link LinkedDataStore} inside
  * Created by Dmitriy Dobrovolskiy on 01.06.2018.
  *
  * @see Farm
+ * @see LinkedDataStore
  * @since *.*.*
  */
 public class DairyFarm implements Farm {
     private LinkedDataStore<CowWithParentId> cows = new LinkedDataStore<>();
 
     public DairyFarm(Cow first) {
-        cows.add(new CowWithParentId(0, "initialCow", -1));
+        cows.add(new CowWithParentId(0, first.getNickName(), first.getCowId()));
     }
 
     @Override
